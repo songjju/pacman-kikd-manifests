@@ -1,2 +1,8 @@
-bases:
-  - ../../k8s/
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../k8s/
+images:
+- digest: sha256:6721c9742c96ee9e3e188ec38bb50ebfa34ef4ebb88b7f1b51578423b891dd83
+  name: docker.io/ssj4358/webfront
+  newTag: latest
